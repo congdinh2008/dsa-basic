@@ -22,6 +22,7 @@ public class MyCustomLinkedList {
     // #region Methods
 
     // #region Add Methods
+
     // Add a new node to the head of the list
     public void addFirst(int value) {
         Node f = head;
@@ -62,15 +63,18 @@ public class MyCustomLinkedList {
         newNode.next = preNode.next;
 
         preNode.next = newNode;
+        size++;
     }
     // #endregion
 
-    // #region Get Methods
+    // #region Get - Search Methods
 
+    // Get the head value
     public int getHead() {
         return head.data;
     }
 
+    // Get the tail value
     public int getTail() {
         Node f = head;
         while (f.next != null) {
@@ -79,6 +83,7 @@ public class MyCustomLinkedList {
         return f.data;
     }
 
+    // Get a node by index
     public Node getNodeByIndex(int index) {
         Node x = head;
         for (int i = 0; i < index; i++)
@@ -90,14 +95,17 @@ public class MyCustomLinkedList {
 
     // #region Delete Methods
 
+    // Delete first node
     public void deleteFirst() {
         if (head.next == null) {
             head = null;
         } else {
             head = head.next;
         }
+        size--;
     }
 
+    // Delete last node
     public void deleteLast() {
         if (head.next == null) {
             head = null;
@@ -110,30 +118,40 @@ public class MyCustomLinkedList {
 
             x.next = null;
         }
+        size--;
     }
 
+    // Delete node by index
     public void deleteAtIndex(int index) {
         if (size <= index) {
             System.out.println("Element at the index not found");
         } else {
             Node x = head;
+            if (index == 0) {
+                head = head.next;
+                x = head;
+            } else {
+                for (int i = 0; i < index - 1; i++) {
+                    x = x.next;
+                }
 
-            for (int i = 0; i < index - 1; i++) {
-                x = x.next;
+                x.next = x.next.next;
             }
-
-            x.next = x.next.next;
         }
+        size--;
     }
 
+    // Delete a node after another node
     public void deleteAfterNode(Node prevNode) {
         if (prevNode.next == null) {
             System.out.println("Element after the node not found");
         } else {
             prevNode.next = prevNode.next.next;
         }
+        size--;
     }
 
+    // Delete all node by value
     public void deleteByValue(int value) {
         if (size == 0) {
             System.out.println("List is empty");
@@ -152,6 +170,21 @@ public class MyCustomLinkedList {
     }
 
     // #endregion
+
+    // #region Update Methods
+
+    // Update a node by index
+    public void updateByIndex(int index, int value) {
+        Node needUpdate = getNodeByIndex(index);
+        if (needUpdate != null) {
+            needUpdate.data = value;
+        } else {
+            throw new NullPointerException("Element not found");
+        }
+    }
+
+    // #endregion
+
     public void traverse() {
         Node x = head;
         while (x != null) {
