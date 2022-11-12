@@ -18,23 +18,21 @@ public class MyStack {
     }
 
     // Check if the stack is empty
-    boolean isEmpty() {
+    public boolean isEmpty() {
         return top < 0;
     }
 
     // Check if the stack is full
-    boolean isFull() {
+    public boolean isFull() {
         return top >= capacity - 1;
     }
 
     // Push value to stack
-    public boolean push(int x) {
+    public void push(int x) {
         if (isFull()) {
             System.out.println("Stack Overflow: Cannot push " + x);
-            return false;
         } else {
             items[++top] = x;
-            return true;
         }
     }
 
