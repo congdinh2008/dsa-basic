@@ -1,4 +1,3 @@
-package java;
 public class StackTest {
     public static void main(String[] args) {
         // Create stack with capacity

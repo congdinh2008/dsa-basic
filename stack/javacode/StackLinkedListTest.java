@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
  * LinkedListTest
  */
@@ -23,5 +25,15 @@ public class StackLinkedListTest {
         System.out.println("Test peek:");
         System.out.println(stack.peek());
         System.out.println(stack.peek());
+
+
+        Stack<String> disks = new Stack<String>();
+
+        disks.push("Cong Dinh");
+        disks.push("3.14");
+
+
+        System.out.println(disks.pop());
+        System.out.println(disks.pop());
     }
 }

@@ -1,4 +1,3 @@
-package java;
 public class MyLinkedList {
     private int size;
     private Node head;

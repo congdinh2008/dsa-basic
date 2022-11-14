@@ -1,4 +1,3 @@
-package java;
 public class MyQueueLinkedList {
     int front, rear, size;
     MyLinkedList list;

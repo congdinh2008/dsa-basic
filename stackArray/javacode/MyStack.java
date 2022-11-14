@@ -1,7 +1,3 @@
-package java;
-/**
- * MyStack
- */
 public class MyStack {
 
     private int capacity;
