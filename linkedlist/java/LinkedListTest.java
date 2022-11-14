@@ -6,7 +6,7 @@ public class LinkedListTest {
     public static void main(String[] args) {
         MyCustomLinkedList list = new MyCustomLinkedList();
 
-        System.out.println("Test add 10 node at first:");
+        System.out.println("Test add 10 node at first:"); 
         list.addFirst(3);
         list.addFirst(4);
         list.addFirst(4);
