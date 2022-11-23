@@ -3,7 +3,7 @@ public class MyLinkedList {
     private Node head;
 
     private static class Node {
-        int data;
+        char data;
         Node next;
 
         Node(int data) {
