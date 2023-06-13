@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public class EmployeeList {
     private int size;
     private Node<Employee> head;
@@ -78,10 +76,10 @@ public class EmployeeList {
         size++;
     }
 
-    public void addByIndex(Node<Employee> preNode, Employee value, int index) {
+    public void addByIndex(Employee value, int index) {
 
         Node<Employee> prevNode = getNodeByIndex(index - 1);
-        addAfter(preNode, value);
+        addAfter(prevNode, value);
         size++;
     }
     // #endregion

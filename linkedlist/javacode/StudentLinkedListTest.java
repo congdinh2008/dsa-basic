@@ -1,6 +1,4 @@
 import java.time.LocalDate;
-import java.util.LinkedList;
-
 public class StudentLinkedListTest {
     public static void main(String[] args) {
         MyLinkedList<Student> list = new MyLinkedList<Student>();
@@ -32,7 +30,5 @@ public class StudentLinkedListTest {
 
         System.out.println(numbers.getHead());
         System.out.println(numbers.getTail());
-
-        LinkedList<String> names = new LinkedList<String>();
     }
 }
