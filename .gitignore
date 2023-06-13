@@ -2,3 +2,10 @@
 .vscode/*
 **/Info.plist
 **/IntegerLinkedList
+mergeSort/hello
+.gitignore
+**/.vscode/**
+mergeSort/hello.dSYM/**
+.gitignore
+mergeSort/mergeSort
+mergeSort/mergeSort.dSYM/**
